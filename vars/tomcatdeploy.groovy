@@ -4,4 +4,5 @@ def call(creds,tomcatIp,username,warName){
       sh "scp -o stictHostkeychecking=no target/${warName}.war ${userName}@${tomcatIp}:/opt/tomcat9/webapps/"
       sh "ssh ${userName}@${tomcatIp} /opt/tomcat9/bin/shutdown.sh"
       sh "ssh ${userName}@${tomcatIp} /opt/tomcat9/bin/startup.sh"
-}
+   }
+}   
